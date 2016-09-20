@@ -1,0 +1,31 @@
+/* 
+    Document   : style
+    Created on : 07-Mar-2013, 15:08:57
+    Author     : Ray Hammond
+    Description:
+        CSS styles for a matching game written using HTML5.
+*/
+
+root { 
+    display: block;
+}
+
+body {
+	background-color: #f0f0f2;
+    margin: 20px 0px 0px 0px;
+    padding: 0;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.column {
+	padding: 0px 120px 0px 120px;
+}
+
+.padded {
+	padding: 10px 0px 10px 0px;
+}
+
+.borderClass{
+  border-color: #00CC00;
+  border-width:1px;
+  border-style: solid;

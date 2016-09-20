@@ -1,0 +1,36 @@
+dictionary = new Array();
+fired = false;
+$("#reactantone").children(".padded").each(function(index) {
+    splitThingy = $(this).find("img").attr("src").split("/");
+    splitThingyLength = splitThingy.length;
+    selectedOne = splitThingy[splitThingyLength - 1];
+    if (dictionary[selectedOne] == 3) {
+        fired = true;
+    } else if (dictionary[selectedOne] == null) {
+        dictionary[selectedOne] = 1;
+    } else {
+        dictionary[selectedOne] = dictionary[selectedOne] + 1;
+    }
+    $("#print").append(splitThingy[splitThingyLength - 1]);
+});
+
+if (!fired) {
+    alert("no matches");
+} else {
+    alert("yes matches");
+}
+
+/*
+give each img div a class called the column it is in.
+Pass the column class to select function
+Save class to variable 'alreadyUsed1'
+If the next selected img has same class, don't allow selection - use if statement
+If different column selected then save to 'alreadyUsed2'
+*/
+
+((column == "productdiv" && alreadyUsed1 == "reactantone" && alreadyUsed2 == "reactanttwo")
+                        || (column == "productdiv" && alreadyUsed1 == "reactanttwo" && alreadyUsed2 == "reactantone")
+                        || (column == "reactantone" && alreadyUsed1 == "reactanttwo" && alreadyUsed2 == "productdiv")
+                        || (column == "reactantone" && alreadyUsed1 == "productdiv" && alreadyUsed2 == "reactanttwo")
+                        || (column == "reactanttwo" && alreadyUsed1 == "reactantone" && alreadyUsed2 == "productdiv")
+                        || (column == "reactanttwo" && alreadyUsed1 == "productdiv" && alreadyUsed2 == "reactantone"))
